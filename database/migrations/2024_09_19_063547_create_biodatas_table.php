@@ -10,7 +10,8 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
+    {   
+        // menambahkan tabel biodata
         Schema::create('biodatas', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
