@@ -12,8 +12,9 @@ class BiodataController extends Controller
      */
     public function index()
     {
-        // MENAMPILKAN formulir biodata
-        return view('Biodata.create');
+      // menampilkan data biodata
+      $data=Biodata::all();
+      return view(compact('data'));
     }
 
     /**
@@ -21,7 +22,8 @@ class BiodataController extends Controller
      */
     public function create()
     {
-        //
+          // MENAMPILKAN formulir biodata
+          return view('Biodata.create');
     }
 
     /**
@@ -50,8 +52,8 @@ class BiodataController extends Controller
      * Display the specified resource.
      */
     public function show(Biodata $biodata)
-    {
-        //
+    {   
+        
     }
 
     /**
