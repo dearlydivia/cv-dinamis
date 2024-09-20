@@ -28,7 +28,23 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // menyimpan data dari formulir education
+        // dd($request);
+        // Validasi input
+        $Validasi=$request->validate([
+            'universitas' => 'required|string|max:255',
+            'jurusan' => 'required|string',
+            'minat' => 'required|string',
+
+        ]);
+
+        // Simpan data ke database
+        Education::create(
+            $Validasi
+
+        );
+
+        return view('show');
     }
 
     /**
