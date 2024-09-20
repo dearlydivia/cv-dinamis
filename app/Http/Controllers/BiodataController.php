@@ -12,6 +12,7 @@ class BiodataController extends Controller
      */
     public function index()
     {
+        // MENAMPILKAN formulir biodata
         return view('Biodata.create');
     }
 
