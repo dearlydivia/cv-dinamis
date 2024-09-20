@@ -28,7 +28,8 @@ class BiodataController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
+    {   
+        // menyimpan data dari formulir biodata
         // dd($request);
         // Validasi input
         $Validasi=$request->validate([
