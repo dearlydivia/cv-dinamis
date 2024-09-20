@@ -14,7 +14,7 @@ class BiodataController extends Controller
     {
       // menampilkan data biodata
       $data=Biodata::all();
-      return view(compact('data'));
+      return view( 'Biodata.show', compact('data'));
     }
 
     /**
@@ -46,6 +46,8 @@ class BiodataController extends Controller
             $Validasi
 
         );
+
+        return view('Biodata.show');
     }
 
     /**
